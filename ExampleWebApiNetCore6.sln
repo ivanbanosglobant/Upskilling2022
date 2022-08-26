@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebApiNetCore6", "ExampleWebApiNetCore6\ExampleWebApiNetCore6.csproj", "{FCA0B737-E061-4CE0-AEA5-5C189E1F7CC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWebApiNetCore6.test", "ExampleWebApiNetCore6.test\ExampleWebApiNetCore6.test.csproj", "{E2E4455C-783A-4B95-9AFE-6E173D15F320}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCA0B737-E061-4CE0-AEA5-5C189E1F7CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA0B737-E061-4CE0-AEA5-5C189E1F7CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA0B737-E061-4CE0-AEA5-5C189E1F7CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA0B737-E061-4CE0-AEA5-5C189E1F7CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E4455C-783A-4B95-9AFE-6E173D15F320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E4455C-783A-4B95-9AFE-6E173D15F320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E4455C-783A-4B95-9AFE-6E173D15F320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E4455C-783A-4B95-9AFE-6E173D15F320}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE96676F-472D-43E0-89E3-AEB9F07C7DD6}
+	EndGlobalSection
+EndGlobal

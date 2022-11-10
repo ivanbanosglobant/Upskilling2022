@@ -1,3 +1,9 @@
+using ExampleWebApiNetCore6.Application;
+using ExampleWebApiNetCore6.DataBase;
+using ExampleWebApiNetCore6.DataBase.DbInterface;
+using MediatR;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +12,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMediatR(typeof(IApplicationAnchor));
+builder.Services.AddScoped<IDataBaseHandler, SqlServerDataBaseHandler>();
+builder.Services.AddSingleton<IConfigureOptions<Database>, DatabaseConfiguration>();
+
 
 var app = builder.Build();
 

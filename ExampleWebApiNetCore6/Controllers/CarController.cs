@@ -1,5 +1,7 @@
-﻿using ExampleWebApiNetCore6.DbInterface;
+﻿
+using ExampleWebApiNetCore6.Application.Queries;
 using ExampleWebApiNetCore6.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net;
@@ -10,11 +12,11 @@ namespace ExampleWebApiNetCore6.Controllers
     [Route("api/[controller]")]
     public class CarController : ControllerBase
     {
-        private readonly IDataBaseHandler _dataBaseHandler;
+        private readonly IMediator _mediator;
 
-        public CarController(IDataBaseHandler dataBaseHandler)
+        public CarController(IMediator mediator)
         {
-            _dataBaseHandler = dataBaseHandler;
+            _mediator = mediator;
         }
 
         [HttpPost]
@@ -27,10 +29,9 @@ namespace ExampleWebApiNetCore6.Controllers
 
         [HttpGet("GetCar/{plate}")]
         [ProducesResponseType(typeof(Car), (int)HttpStatusCode.OK)]
-        public async Task<Car> GetCar(string plate)
+        public async Task<Car> GetCar(string plate, CancellationToken cancellationToken)
         {
-            //var car = new Car() { Plate = "KJZ881", User = "Ivan Baños" };
-            var car = await _dataBaseHandler.GetCarBayPlate(plate);
+            var car = await _mediator.Send(new GetCarByPlateQuery(plate) ,cancellationToken);
             return car;
         }
     }

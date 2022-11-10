@@ -3,6 +3,6 @@
     public class Car
     {
         public string Plate { get; set; }
-        public string User { get; set; }
+        public string Driver { get; set; }
     }
 }

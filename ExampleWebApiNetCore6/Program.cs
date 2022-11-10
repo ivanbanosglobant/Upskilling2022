@@ -2,6 +2,7 @@ using ExampleWebApiNetCore6.Application;
 using ExampleWebApiNetCore6.DataBase;
 using ExampleWebApiNetCore6.DataBase.DbInterface;
 using MediatR;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddMediatR(typeof(IApplicationAnchor));
 builder.Services.AddScoped<IDataBaseHandler, SqlServerDataBaseHandler>();
+builder.Services.AddSingleton<IConfigureOptions<Database>, DatabaseConfiguration>();
+
 
 var app = builder.Build();
 

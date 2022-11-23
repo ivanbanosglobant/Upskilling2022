@@ -64,3 +64,17 @@ begin
 	select Plate, Driver from [Car]
 	where Plate = @Plate
 end
+GO
+create procedure SaveUser
+(@UserID [uniqueidentifier],
+	@Username [nvarchar](50),
+	@Password [nvarchar](MAX),
+	@Name [nchar](10),
+	@LastName [nchar](10))
+	as
+	begin
+		insert into dbo.[User](UserID, Username, [Password],[Name], LastName)values(@UserID, @Username, @Password, @Name, @LastName)
+	end
+GO
+
+select * from [User]

@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebApiNetCore6", "Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebApiNetCore6.test", "ExampleWebApiNetCore6.test\ExampleWebApiNetCore6.test.csproj", "{E2E4455C-783A-4B95-9AFE-6E173D15F320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWebApiNetCore6.DataBase", "ExampleWebApiNetCore6.DataBase\ExampleWebApiNetCore6.DataBase.csproj", "{72990E16-F077-41F2-AD15-9F769810B07F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebApiNetCore6.DataBase", "ExampleWebApiNetCore6.DataBase\ExampleWebApiNetCore6.DataBase.csproj", "{72990E16-F077-41F2-AD15-9F769810B07F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWebApiNetCore6.Domain", "ExampleWebApiNetCore6.Domain\ExampleWebApiNetCore6.Domain.csproj", "{86F26E54-AACB-4F27-B631-EE25888A35DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebApiNetCore6.Domain", "ExampleWebApiNetCore6.Domain\ExampleWebApiNetCore6.Domain.csproj", "{86F26E54-AACB-4F27-B631-EE25888A35DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWebApiNetCore6.Application", "ExampleWebApiNetCore6.Application\ExampleWebApiNetCore6.Application.csproj", "{66A86416-A9A0-47DF-B147-BD07BB284244}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleWebApiNetCore6.Application", "ExampleWebApiNetCore6.Application\ExampleWebApiNetCore6.Application.csproj", "{66A86416-A9A0-47DF-B147-BD07BB284244}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

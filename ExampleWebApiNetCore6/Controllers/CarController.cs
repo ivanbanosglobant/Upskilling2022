@@ -1,5 +1,6 @@
 ﻿
 using ExampleWebApiNetCore6.Application.Queries;
+using ExampleWebApiNetCore6.Domain.Exceptions;
 using ExampleWebApiNetCore6.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,10 @@ namespace ExampleWebApiNetCore6.Controllers
 
         [HttpGet("GetCar/{plate}")]
         [ProducesResponseType(typeof(Car), (int)HttpStatusCode.OK)]
-        public async Task<Car> GetCar(string plate, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCar(string plate, CancellationToken cancellationToken)
         {
-            var car = await _mediator.Send(new GetCarByPlateQuery(plate) ,cancellationToken);
-            return car;
+            var car = await _mediator.Send(new GetCarByPlateQuery(plate), cancellationToken);
+            return Ok(car);
         }
     }
 }
